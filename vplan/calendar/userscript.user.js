@@ -6,8 +6,8 @@
 // @author       Julian Hoffmann
 // @match        https://cl1.vplan.de/pxc/Landing.xhtml*
 // @grant        none
-// @updateURL   https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.js
-// @downloadURL https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.js
+// @updateURL   https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js
+// @downloadURL https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js
 
 // ==/UserScript==
 

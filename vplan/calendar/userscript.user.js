@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         Kalender Einträge für Outlook aus VPLAN
-// @namespace    julianhoffmann/pxc/vplan
-// @version      1.0
+// @namespace       https://github.com/jhoffmannpxc
+// @version      1.0.1
 // @description  Erstellen von Kalendereinträgen für Outlook aus der Planungstool-Seite mit Vorschau und Zurücksetzen
 // @author       Julian Hoffmann
 // @match        https://cl1.vplan.de/pxc/Landing.xhtml*
 // @grant        none
 // @updateURL   https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js
 // @downloadURL https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js
+// @homepageURL     https://jhoffmannpxc.github.io/userscripts/vplan/calendar/
+// @supportURL      https://github.com/jhoffmannpxc/userscripts/issues
 
 // ==/UserScript==
 

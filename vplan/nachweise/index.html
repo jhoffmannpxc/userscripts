@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Alle Ausbildungsnachweise markieren</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #6200ee;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #6200ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #3700b3;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+        details {
+            margin-top: 40px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 20px;
+        }
+        summary {
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #6200ee;
+        }
+        ol {
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Alle Ausbildungsnachweise markieren</h1>
+    <p>Mit diesem UserScript kannst du über einen Button alle Checkboxen der Ausbildungsnachweise automatisch anwählen lassen. So können sofort alle Ausbildungsnachweise ausgewählt und akzeptiert werden.</p>
+    <a class="button" href="https://jhoffmannpxc.github.io/userscripts/vplan/nachweise/userscript.user.js" target="_blank">
+        🧩 Skript installieren
+    </a>
+    <p class="note">Stelle sicher, dass <strong><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=en" target="_blank">Tampermonkey</a></strong> in deinem Browser installiert ist, bevor du auf den Installationsbutton klickst. Ebenfalls muss in Edge der Entwicklermodus aktiviert sein.</p>
+
+    <details>
+        <summary>⚙️ Entwicklermodus in Edge aktivieren</summary>
+        <ol>
+            <li>Öffne die folgende Seite in Edge: <b>edge://extensions/</b>. (Kopieren und in die Adressleiste von Edge einfügen)</li>
+            <li>Aktiviere auf der linken Seite den Schalter <b>"Entwicklermodus"</b>.</li>
+            <li>Nun kann die Erweiterung installiert / genutzt werden.</li>
+        </ol>
+    </details>
+
+    <details>
+        <summary>📘 Anleitung zur Verwendung mit VPLAN</summary>
+        <ol>
+            <li>Öffne die Unterseite der <b>Ausbildungsnachweise</b>>.</li>
+            <li>Auf der Seite erscheint nun ein grüner Button <b>Alle Checkboxen aktivieren</b>.</li>
+            <li>Nun werden alle Checkboxen automatisch aktiviert und über den <b>Annehmen</b> Button lassen sich nun alle Nachweise aufeinmal annehmen.</li>
+        </ol>
+    </details>
+</body>
+</html>

@@ -13,7 +13,6 @@
             padding: 0 20px;
             background-color: #f9f9f9;
             color: #333;
-            margin-left: 240px; /* Platz für die Navigation */
         }
         h1 {
             color: #6200ee;
@@ -57,46 +56,55 @@
         }
     </style>
 </head>
-    <div id="nav-placeholder"></div>
-<script>
-    fetch("../../nav.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("nav-placeholder").innerHTML = data;
-        });
-</script>
 
 <body>
-        <h1>Outlook-Kalenderexport für Planungstool</h1>
-    <p>Mit diesem UserScript kannst du Kalendereinträge direkt aus dem Planungstool exportieren und als Outlook-Datei herunterladen.</p>
-    <a class="button" href="https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js" target="_blank">
-        🧩 Skript installieren
-    </a>
-    <p class="note">Stelle sicher, dass <strong><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=en" target="_blank">Tampermonkey</a></strong> in deinem Browser installiert ist, bevor du auf den Installationsbutton klickst. Ebenfalls muss in Edge der Entwicklermodus aktiviert sein.</p>
+    <div style="display: flex; align-items: flex-start;">
+        <div id="nav-placeholder"></div>
 
-    <details>
-        <summary>⚙️ Entwicklermodus in Edge aktivieren</summary>
-        <ol>
-            <li>Öffne die folgende Seite in Edge: <b>edge://extensions/</b>. (Kopieren und in die Adressleiste von Edge einfügen)</li>
-            <li>Aktiviere auf der linken Seite den Schalter <b>"Entwicklermodus"</b>.</li>
-            <li>Nun kann die Erweiterung installiert / genutzt werden.</li>
-        </ol>
-    </details>
+        <div style="flex: 1;">
+            <h1>Outlook-Kalenderexport für Planungstool</h1>
+            <p>Mit diesem UserScript kannst du Kalendereinträge direkt aus dem Planungstool exportieren und als Outlook-Datei herunterladen.</p>
+            <a class="button" href="https://jhoffmannpxc.github.io/userscripts/vplan/calendar/userscript.user.js" target="_blank">
+                🧩 Skript installieren
+            </a>
+            <p class="note">Stelle sicher, dass <strong><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=en" target="_blank">Tampermonkey</a></strong> in deinem Browser installiert ist, bevor du auf den Installationsbutton klickst. Ebenfalls muss in Edge der Entwicklermodus aktiviert sein.</p>
+        
+            <details>
+                <summary>⚙️ Entwicklermodus in Edge aktivieren</summary>
+                <ol>
+                    <li>Öffne die folgende Seite in Edge: <b>edge://extensions/</b>. (Kopieren und in die Adressleiste von Edge einfügen)</li>
+                    <li>Aktiviere auf der linken Seite den Schalter <b>"Entwicklermodus"</b>.</li>
+                    <li>Nun kann die Erweiterung installiert / genutzt werden.</li>
+                </ol>
+            </details>
+        
+            <details>
+                <summary>📘 Anleitung zur Verwendung mit VPLAN</summary>
+                <ol>
+                    <li>Öffne das <strong>VPLAN Dashboard</strong> und navigiere zum Kalender.</li>
+                    <li>Klicke auf den <strong>Montag</strong> der gewünschten Woche, um alle Einträge dieser Woche zu laden.</li>
+                    <li>Oben rechts erscheint ein zusätzliches Fenster mit einer Übersicht der gefundenen Kalendereinträge.</li>
+                    <li>Wenn die Einträge korrekt sind, klicke auf <strong>"Kalenderdatei herunterladen"</strong>.</li>
+                    <li>Falls etwas nicht stimmt, klicke auf <strong>"Zurücksetzen"</strong> und wähle erneut den Montag aus.</li>
+                    <li>Wiederhole diesen Vorgang Woche für Woche: Montag auswählen → Einträge prüfen → Datei herunterladen.</li>
+                    <li>Die heruntergeladene <code>.ics</code>-Datei einfach <strong>doppelklicken</strong> – Outlook öffnet ein Fenster zum Import.</li>
+                    <li>Für jeden Eintrag wird ein Termin von <strong>07:00 bis 14:30 Uhr</strong> mit dem Status <em>"gebucht"</em> erstellt.</li>
+                    <li>Der Titel enthält das <strong>Lernziel</strong>, die <strong>Anzahl der Lernenden</strong> in Klammern und den <strong>Lernort</strong>.</li>
+                    <li>In der Beschreibung findest du die vollständige <strong>Beschreibung des Lernziels</strong>.</li>
+                </ol>
+            </details>
+        </div>
+    </div>
 
-    <details>
-        <summary>📘 Anleitung zur Verwendung mit VPLAN</summary>
-        <ol>
-            <li>Öffne das <strong>VPLAN Dashboard</strong> und navigiere zum Kalender.</li>
-            <li>Klicke auf den <strong>Montag</strong> der gewünschten Woche, um alle Einträge dieser Woche zu laden.</li>
-            <li>Oben rechts erscheint ein zusätzliches Fenster mit einer Übersicht der gefundenen Kalendereinträge.</li>
-            <li>Wenn die Einträge korrekt sind, klicke auf <strong>"Kalenderdatei herunterladen"</strong>.</li>
-            <li>Falls etwas nicht stimmt, klicke auf <strong>"Zurücksetzen"</strong> und wähle erneut den Montag aus.</li>
-            <li>Wiederhole diesen Vorgang Woche für Woche: Montag auswählen → Einträge prüfen → Datei herunterladen.</li>
-            <li>Die heruntergeladene <code>.ics</code>-Datei einfach <strong>doppelklicken</strong> – Outlook öffnet ein Fenster zum Import.</li>
-            <li>Für jeden Eintrag wird ein Termin von <strong>07:00 bis 14:30 Uhr</strong> mit dem Status <em>"gebucht"</em> erstellt.</li>
-            <li>Der Titel enthält das <strong>Lernziel</strong>, die <strong>Anzahl der Lernenden</strong> in Klammern und den <strong>Lernort</strong>.</li>
-            <li>In der Beschreibung findest du die vollständige <strong>Beschreibung des Lernziels</strong>.</li>
-        </ol>
-    </details>
+    <script>
+        fetch("../../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+    </script>
+
+
+        
 </body>
 </html>

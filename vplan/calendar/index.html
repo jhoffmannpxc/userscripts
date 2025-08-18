@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Outlook-Kalenderexport UserScript</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
             max-width: 700px;
@@ -12,6 +13,7 @@
             padding: 0 20px;
             background-color: #f9f9f9;
             color: #333;
+            margin-left: 240px; /* Platz für die Navigation */
         }
         h1 {
             color: #6200ee;
@@ -55,6 +57,15 @@
         }
     </style>
 </head>
+    <div id="nav-placeholder"></div>
+<script>
+    fetch("nav.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-placeholder").innerHTML = data;
+        });
+</script>
+
 <body>
         <h1>Outlook-Kalenderexport für Planungstool</h1>
     <p>Mit diesem UserScript kannst du Kalendereinträge direkt aus dem Planungstool exportieren und als Outlook-Datei herunterladen.</p>

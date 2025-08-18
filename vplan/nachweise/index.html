@@ -56,29 +56,43 @@
     </style>
 </head>
 <body>
-        <h1>Alle Ausbildungsnachweise markieren</h1>
-    <p>Mit diesem UserScript kannst du über einen Button alle Checkboxen der Ausbildungsnachweise automatisch anwählen lassen. So können sofort alle Ausbildungsnachweise ausgewählt und akzeptiert werden.</p>
-    <a class="button" href="https://jhoffmannpxc.github.io/userscripts/vplan/nachweise/userscript.user.js" target="_blank">
-        🧩 Skript installieren
-    </a>
-    <p class="note">Stelle sicher, dass <strong><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=en" target="_blank">Tampermonkey</a></strong> in deinem Browser installiert ist, bevor du auf den Installationsbutton klickst. Ebenfalls muss in Edge der Entwicklermodus aktiviert sein.</p>
+    <div style="display: flex; align-items: flex-start;">
+        <div id="nav-placeholder"></div>
 
-    <details>
-        <summary>⚙️ Entwicklermodus in Edge aktivieren</summary>
-        <ol>
-            <li>Öffne die folgende Seite in Edge: <b>edge://extensions/</b>. (Kopieren und in die Adressleiste von Edge einfügen)</li>
-            <li>Aktiviere auf der linken Seite den Schalter <b>"Entwicklermodus"</b>.</li>
-            <li>Nun kann die Erweiterung installiert / genutzt werden.</li>
-        </ol>
-    </details>
+        <div style="flex: 1;">
+            <h1>Alle Ausbildungsnachweise markieren</h1>
+            <p>Mit diesem UserScript kannst du über einen Button alle Checkboxen der Ausbildungsnachweise automatisch anwählen lassen. So können sofort alle Ausbildungsnachweise ausgewählt und akzeptiert werden.</p>
+            <a class="button" href="https://jhoffmannpxc.github.io/userscripts/vplan/nachweise/userscript.user.js" target="_blank">
+                🧩 Skript installieren
+            </a>
+            <p class="note">Stelle sicher, dass <strong><a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=en" target="_blank">Tampermonkey</a></strong> in deinem Browser installiert ist, bevor du auf den Installationsbutton klickst. Ebenfalls muss in Edge der Entwicklermodus aktiviert sein.</p>
 
-    <details>
-        <summary>📘 Anleitung zur Verwendung mit VPLAN</summary>
-        <ol>
-            <li>Öffne die Unterseite der <b>Ausbildungsnachweise</b>.</li>
-            <li>Auf der Seite erscheint nun ein grüner Button <b>Alle Checkboxen aktivieren</b>.</li>
-            <li>Nun werden alle Checkboxen automatisch aktiviert und über den <b>Annehmen</b> Button lassen sich nun alle Nachweise aufeinmal annehmen.</li>
-        </ol>
-    </details>
+            <details>
+                <summary>⚙️ Entwicklermodus in Edge aktivieren</summary>
+                <ol>
+                    <li>Öffne die folgende Seite in Edge: <b>edge://extensions/</b>. (Kopieren und in die Adressleiste von Edge einfügen)</li>
+                    <li>Aktiviere auf der linken Seite den Schalter <b>"Entwicklermodus"</b>.</li>
+                    <li>Nun kann die Erweiterung installiert / genutzt werden.</li>
+                </ol>
+            </details>
+
+            <details>
+                <summary>📘 Anleitung zur Verwendung mit VPLAN</summary>
+                <ol>
+                    <li>Öffne die Unterseite der <b>Ausbildungsnachweise</b>.</li>
+                    <li>Auf der Seite erscheint nun ein grüner Button <b>Alle Checkboxen aktivieren</b>.</li>
+                    <li>Nun werden alle Checkboxen automatisch aktiviert und über den <b>Annehmen</b> Button lassen sich nun alle Nachweise aufeinmal annehmen.</li>
+                </ol>
+            </details>
+        </div>
+    </div>
+
+    <script>
+        fetch("../../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            });
+    </script>
 </body>
 </html>

@@ -9,24 +9,3 @@
         </li>
     </ul>
 </nav>
-
-<style>
-    .active {
-        font-weight: bold; /* Macht den Text fett */
-        color: #6200ee; /* Ändert die Farbe, um den aktuellen Eintrag hervorzuheben */
-    }
-</style>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const currentUrl = window.location.href; // Holt die aktuelle URL
-        const links = document.querySelectorAll('nav a'); // Holt alle Links in der Navigation
-
-        links.forEach(link => {
-            // Überprüft, ob der Link zur aktuellen URL passt
-            if (link.href === currentUrl) {
-                link.classList.add('active'); // Fügt die 'active'-Klasse hinzu
-            }
-        });
-    });
-</script>
